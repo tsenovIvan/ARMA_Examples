@@ -130,6 +130,8 @@ hyp_fnc_traceFireEvent = {
         //Now, checks have all been run, so let's do the actual bullet tracking stuff
         _positions set [count _positions, [position _projectile, (velocity _projectile) distance [0,0,0]]];
         _unit setVariable [format["hyp_var_tracer_projectile_%1", _projIndex], _positions];
+        
+        false;
     };
  
     //Now, if a lifetime is specified, wait until it has elapsed, then delete all data for that projectile
